@@ -1,0 +1,25 @@
+.card-box{
+    width: 200px;
+    height: 270px;   
+    text-align: center;
+    color: #FFFF;  
+    
+}
+.card-box div{
+    display: none; 
+    z-index: 5;   
+    height: 100%;         
+}
+
+.card-box:hover div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: saturate(80%) blur(5px) ;  
+    cursor: pointer;  
+}
+.card-box:hover div p{
+    font-size: 25px;
+    font-weight: bolder;
+    text-decoration: overline;
+}
