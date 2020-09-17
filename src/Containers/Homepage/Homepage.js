@@ -9,6 +9,7 @@ import PulseLoader from "react-spinners/PulseLoader";
 import Header from '../../Components/Header/Header'
 import Button from '../../Components/Button/Button';
 import Card from '../../Components/Card/Card';
+import { Link } from 'react-router-dom';
 
 function Homepage(){
     const [search, setSearch] = useState()
@@ -37,7 +38,7 @@ function Homepage(){
             <div className="sup-box">
                 {loading ? <div> <PulseLoader color="#468EFF"/></div> : (sups ? sups.map(sup => {
                     return(
-                        <Card name={sup.name} image={sup.image.url} />
+                        <Link key={sup.id} to={`/super/${sup.id}`} ><Card name={sup.name} image={sup.image.url} /></Link> 
                     )
                 }): <p style={{textAlign:'center'}}>Search</p>)}
             </div>
